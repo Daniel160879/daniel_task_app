@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
-int multiplyAdvanced(int a, int b) {
-  // Lösung hier einfügen
-  throw UnimplementedError();
-}
+int multiplyAdvanced(int a, int b) => a * b;
 
 class S3388 extends StatefulWidget {
   const S3388({Key? key}) : super(key: key);
