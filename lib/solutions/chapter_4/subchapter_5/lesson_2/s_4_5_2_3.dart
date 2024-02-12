@@ -1,25 +1,36 @@
 import 'package:flutter/material.dart';
 
-class S4523 extends StatefulWidget {
-  const S4523({super.key});
-
+class S4523 extends StatelessWidget {
+  const S4523({Key? key}) : super(key: key);
   @override
-  State<S4523> createState() => _MyNameWidgetState();
+  Widget build(BuildContext context) {
+    return const MaterialApp(home: MyNameWidget());
+    // throw UnimplementedError();
+  }
 }
 
-class _MyNameWidgetState extends State<S4523> {
+class MyNameWidget extends StatefulWidget {
+  const MyNameWidget({Key? key}) : super(key: key);
+  @override
+  MyNameState createState() => MyNameState();
+}
+
+class MyNameState extends State<MyNameWidget> {
+  get isState => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Column(
           children: <Widget>[
-            const Text(''),
             ElevatedButton(
               onPressed: () {
-                Text('$State');
+                void setState() {
+                  isState ? '' : 'Daniel';
+                }
               },
-              child: const Text('Daniel'),
+              child: const Column(),
             ),
           ],
         ),
